@@ -1,80 +1,96 @@
 *{
     margin: 0;
     user-select: none;
+    box-sizing: border-box;
 }
 body{
+    width: 100vw;
     background-color:#FBECD9;
 }
-.scroll-container{
-    display: block;
+#container{
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
     height: 100vh;
     font-family: "Bagerich";
     font-weight: 400;
     font-size: 4rem;
     text-align: center;
 }
-#container{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
 .scroll-element{
     width: 100%;
     height: 100vh;
 }
 #title-page{
-    background-image: url(../images/muchTitlePAge.png);
+    /* background-image: url(../images/muchTitlePAge.png);
     background-position: center center;
-    background-size: cover;
+    background-size: cover; */
     font-family: "Bagerich";
-    /* background-color: #B1BFAD; */
     color: #64250E;
     font-weight: 400;
-}
-#main-title{
-    font-family: Bagerich;
-    font-size: 90px;
-}
-#date-title{
-    font-family: Bagerich;
-    font-size: 70px;
 }
 #title-page p{
     font-family: Bagerich;
     font-size: 40px;
+    margin: auto;
     color: white;
     background-color: #556E59;
-    width: 400px;
+    width: 500px;
     border-radius: 15px;
-    margin-left: 43%;
+}
+#main-title{
+    font-size: 70px;
+}
+#date-title{
+    font-family: Bagerich;
+    font-size: 50px;
 }
 .page-title{
-    text-align: right;
+    text-align: center;
     font-family: Bagerich;
-    font-size: 60px;
+    font-size: 53px;
+}
+#main-image{
+    max-height: 50%;
+}
+.row{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.flex-image{
+    height: 50%;
+    max-width: 100%;
+    object-fit: scale-down;
+    max-height: fit-content;
+    border-radius: 25px;
 }
 #section-1{
     color: #64250E;
-    /* background-image: url(../images/margaretmacdonald.jpg);
-    background-size: cover; */
 }
-.section p{
+.column{
+    width: 33%;
+    flex: 1;
+    padding: 10px;
+}
+.column p{
     font-family: Quicksand Light;
     font-size: 19px;
-}
-.section{
-    width: 450px;
-    background-color: aliceblue;
-    padding: 5px;
+    background-color: #C3BCD2;
+    padding: 10px;
     border-radius: 15px;
 }
-#section1-text{
-    position: absolute;
-    left: 20px;
+#col1 p{
+    height: 60%;
+    margin-bottom: 15px;
 }
-#section1-text2{
-    position: absolute;
-    left: 20px;
+#col2 p{
+    height: 40%;
+}
+#col5 p{
+    margin-bottom: 15px;
 }
 #section-2{
     background-color: #FBECD9;
@@ -99,13 +115,6 @@ body{
 @font-face {
     font-family: "Quicksand Light";
     src: url("../fonts/Quicksand-VariableFont_wght.ttf");
-}
-.flex-image-1{
-    position: absolute;
-    width: 1280px;
-    height: 691px;
-    padding-left: 80px;
-    padding-top: 333px;
 }
 .js-scroll{
     opacity: 0;
@@ -161,3 +170,9 @@ body{
         opacity: 1;
     }
 }
+/* optimised for my laptop */
+/* @media (max-width:1366px) {
+    .column{
+        min-width: 50%;
+    }
+} */
