@@ -64,3 +64,9 @@ function throttle(fn, wait) {
     }
   };
 };
+//BUTTON FUNCTION
+// when the user clicks on the button, it will scroll to the top of the document
+function topFunction(){
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
