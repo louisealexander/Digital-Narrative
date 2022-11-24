@@ -5,6 +5,7 @@ scrollElements.forEach((el) => {
   }
 }
 )
+//listens to when the page is being scrolled on and applies the animations
 window.addEventListener('scroll', throttle(handleScrollAnimation, 100))
 // display functions
 // checks whether element is in viewable area

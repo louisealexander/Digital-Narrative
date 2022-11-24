@@ -1,3 +1,4 @@
+/* universal selector */
 *{
     margin: 0;
     user-select: none;
@@ -5,7 +6,9 @@
 body{
     background-color:#FBECD9;
 }
+/* a div that contains each element of the webpage */
 #container{
+    /* sets the display to flex, child elements automatically align like columns or rows with auto width and auto height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,11 +20,17 @@ body{
     font-weight: 400;
     font-size: 4rem;
 }
+/* styling for the width and height for each narrative section */
 .scroll-element{
     width: 100%;
     height: 100vh;
 }
+/* styling for the title page */
 #title-page{
+    background-image: url(../images/muchTitlePAge.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     text-align: center;
     font-family: "Bagerich";
     color: #64250E;
@@ -60,20 +69,24 @@ body{
     display: flex;
     justify-content: center;
 }
+/* styling for the row */
 .row{
     height: 100vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
+/* styling for the flex-image class */
 .flex-image{
     width: 100%;
     border-radius: 15px;
 }
+/* styling for each column */
 .column{
     margin-left: 20px;
     margin-right: 20px;
-    width: calc(100/3);
+    /* divides page into 3 */
+    width: calc(100/3); 
     flex: 1;
     font-size: 0;
 }
@@ -84,6 +97,7 @@ body{
     border-radius: 15px;
     padding: 15px;
 }
+/* styling for section 1 - Macdonalds */
 #section-1{
     color: #64250E;
 }
@@ -102,6 +116,7 @@ body{
 #col3 p{
     margin-bottom: 10px;
 }
+/* styling for section 2 - Mackintosh */
 #section-2{
     background-color: #FBECD9;
     color: #64250E;
@@ -118,6 +133,7 @@ body{
 #col6 p{
     margin-bottom: 10px;
 }
+/* styling for section 3 - Klimt */
 #section-3{
     background-color: #FBECD9;
     color: #64250E;
@@ -134,6 +150,7 @@ body{
 #adele-klimt{
     margin-bottom: 25px;
 }
+/* styling for section 4 - Beardsley */
 #section-4{
     background-color: #FBECD9;
     color: #64250E;
@@ -148,6 +165,7 @@ body{
 #beardsley8{
     margin-bottom: 5px;
 }
+/* styling for section 5 - Mucha */
 #section-5{
     background-color: #FBECD9;
     color: #64250E;
@@ -164,17 +182,16 @@ body{
 #mucha4{
     margin-bottom: 55px;
 }
+/* importing a typeface to use for the headers */
 @font-face {
     font-family: "Bagerich";
     src: url("../fonts/FontsFree-Net-Bagerich.ttf");
 }
-@font-face {
-    font-family: "Quicksand Light";
-    src: url("../fonts/Quicksand-VariableFont_wght.ttf");
-}
+/* the page will be invisible until scrolled over */
 .js-scroll{
     opacity: 0;
 }
+/* makes the animations smoother by easing them in */
 .scrolled.fade-in{
     animation: fade-in 1.5s ease-in-out both;
 }
@@ -187,7 +204,9 @@ body{
 .scrolled.slide-bottom{
     animation: slide-in-bottom 1.5s ease-in-out both;
 }
-/* Keyframe animations */
+/* KEYFRAME ANIMATIONS */
+/* Sets translations across the page for animations */
+/* fade in animation */
 @keyframes fade-in {
     0%{
         opacity: 0;
@@ -196,6 +215,7 @@ body{
         opacity: 1;
     }
 }
+/* slide in from right animation */
 @keyframes slide-in-right {
     0%{
         transform: translateX(200px);
@@ -206,6 +226,7 @@ body{
         opacity: 1;
     }
 }
+/* slide in from left animation */
 @keyframes slide-in-left {
     0%{
         transform: translateX(-200px);
@@ -216,6 +237,7 @@ body{
         opacity: 1;
     }
 }
+/* slide in from bottom animation */
 @keyframes slide-in-bottom {
     0%{
         transform: translateY(100px);
